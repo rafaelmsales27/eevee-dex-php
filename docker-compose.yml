@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: my_db
+      MYSQL_USER: rafa
+      MYSQL_PASSWORD: password
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    volumes:
+      - './db:/docker-entrypoint-initdb.d' # Make container load dumn SQL file everytimne we start it
+  www:
+    image: php:apache
+    volumes:
+      - './:/var/www/html' # Sync project dir with container web dir
+    ports:
+      - 80:80
+      - 443:443 # SSL
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8001:80
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306
