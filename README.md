@@ -1,6 +1,6 @@
 # Eevee Index (eevee-dex)
 
-A web application that serves as an index of Pokemons, providing pictures, descriptions, and other data for each Pokemon entry.
+A web application that serves as an index of Pokemons, providing pictures, descriptions, and other data for each Pokemon entry. It uses php and MySQL inside a docker container. It also uses the MySQL Improved Extension (MySQLi) to connect to the database.
 
 ## Table of Contents
 
@@ -16,28 +16,30 @@ A web application that serves as an index of Pokemons, providing pictures, descr
 ## Installation
 
 1. Clone the repository:    `git clone https://github.com/your-username/eevee-dex.git`
-2. Install the required dependencies:    `pip install -r requirements.txt`
-3. Run the web application: `flask run`
+2. Initiate docker container:    `docker-compose up`
+3. Set up MySQLi library: Run the command `docker-php-ext-install mysqli` on the docker image terminal and restart the container to apply changes.
 
 ## Usage
 
 1. Open the web application in your browser.
-2. Browse through the pokemon Index to view pokemon entries.
+2. Browse through the Poké-dex Index to view pokemon entries.
 3. Click on individual pokemon entries to see detailed information, including pictures, descriptions, and additional data.
-4. Use the search functionality to find specific pokemon by name or other criteria.
+4. Use the search functionality to find specific pokemon by name.
 
 ## Features
 
-- [ ] Comprehensive index of pokemon entries.
+- [x] Comprehensive index of pokemon entries.
 - [x] Display of pokemon pictures, weight and height.
   - [ ] Display evolutions
   - [x] Display type
+    - [x] Add style to types.
+  - [x] Add pagination.
 - [x] Search functionality to find specific pokemon by name or id.
 <!--  - [ ] Search by type -->
 <!--  - [ ] Search by habitat -->
 - [ ] Allow users to register and have favorite pokemon.
 - [ ] Allow password change.
-- [ ] Add style to types.
+
 <!-- - [ ] Have pokemon news section linked to pokemon official news -->
 
 ## Contributing
