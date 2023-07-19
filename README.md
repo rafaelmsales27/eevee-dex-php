@@ -17,7 +17,7 @@ A web application that serves as an index of Pokemons, providing pictures, descr
 
 1. Clone the repository:    `git clone https://github.com/your-username/eevee-dex.git`
 2. Initiate docker container:    `docker-compose up`
-3. Set up MySQLi library: Run the command `docker-php-ext-install mysqli` on the docker image terminal and restart the container to apply changes.
+3. Set up MySQLi library: Run the command `docker-php-ext-install mysqli` on the docker container terminal and restart the container to apply changes.
 
 ## Usage
 
